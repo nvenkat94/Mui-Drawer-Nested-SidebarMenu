@@ -76,6 +76,7 @@ const App: React.FC = () => {
     </Typography>
   );
   const [show, setShow] = React.useState(false);
+
   const handleside = () => {
     setShow(false);
   };
@@ -86,7 +87,7 @@ const App: React.FC = () => {
         <CssBaseline />
 
         <Drawer anchor="left" open={show} onClose={() => setShow(false)}>
-          <AppMenu handle={handleside} />
+          <AppMenu handle={setShow} />
         </Drawer>
         <main className={classes.content}>
           <Container maxWidth="lg" className={classes.container}>
